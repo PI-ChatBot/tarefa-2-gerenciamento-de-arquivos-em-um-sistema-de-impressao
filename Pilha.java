@@ -40,6 +40,15 @@ public class Pilha {
         return null;
     }
 
+    public int consultarPosicao(String nomeArquivo){
+        for (int i = topo; i >= 0; i--) {
+            if (pilha[i].getNomeArquivo().equals(nomeArquivo)) {
+                return topo - i + 1;
+            }
+        }
+        return -1;
+    }
+
     public void imprimirPilha() {
         System.out.println("Pilha de Reimpressão:");
         for (int i = topo; i >= 0; i--) {
