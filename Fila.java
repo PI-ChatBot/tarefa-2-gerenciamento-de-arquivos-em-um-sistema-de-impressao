@@ -47,6 +47,15 @@ public class Fila {
         return null;
     }
 
+    public int consultarPosicao(String nomeArquivo){
+        for(int i = 0; i < tamanho; i++){
+            int idx = (frente + i) % fila.length;
+            if(fila[idx].getNomeArquivo().equals(nomeArquivo))
+                return i + 1;
+        }
+        return -1;
+    }
+
     public void imprimirFila() {
         System.out.println("Fila de Impressão:");
         for (int i = 0; i < tamanho; i++) {

@@ -51,6 +51,7 @@ public class Main {
                     Documento encontrado = filaImpressao.consultar(nomeBusca);
                     if (encontrado != null) {
                         System.out.println("Documento encontrado na fila:\n" + encontrado);
+                        System.out.println("Posição: " + filaImpressao.consultarPosicao(nomeBusca));
                     } else {
                         System.out.println("Documento não está na fila.");
                     }
@@ -84,6 +85,8 @@ public class Main {
                     Documento encontradoPilha = pilhaReimpressao.consultar(nomeBusca2);
                     if (encontradoPilha != null) {
                         System.out.println("Documento encontrado na pilha:\n" + encontradoPilha);
+                        System.out.println("Posição: " + pilhaReimpressao.consultarPosicao(nomeBusca2));
+
                     } else {
                         System.out.println("Documento não está na pilha.");
                     }
